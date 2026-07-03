@@ -1,0 +1,26 @@
+{
+	"name": "Sprecko",
+	"frame": "frame_0.png",
+
+	"colours": {
+		"c1": "#aeed93",
+		"c2": "#fcfcb7",
+		"c3": "#cb686e",
+		"c4": "#e8806c"
+	},
+
+	"sounds": {
+		"grab": [
+			"sounds/grab/hello_1.mp3",
+			"sounds/grab/hello_2.mp3",
+			"sounds/grab/hello_3.mp3",
+			"sounds/grab/hello_4.mp3"
+		],
+		"release": [
+			"sounds/release/boo_1.mp3",
+			"sounds/release/boo_2.mp3",
+			"sounds/release/boo_3.mp3",
+			"sounds/release/boo_4.mp3"
+		]
+	}
+}
