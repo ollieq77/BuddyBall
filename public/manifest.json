@@ -1,6 +1,8 @@
 {
-	"sprecko": {
-		"path": "/buddies/sprecko/",
-		"manifest": "/buddies/sprecko/manifest.json"
-	}
+    "buddies": {
+	    "sprecko": {
+	    	"path": "/buddies/sprecko/",
+	    	"manifest": "/buddies/sprecko/manifest.json"
+	    }
+    }
 }
