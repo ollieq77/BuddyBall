@@ -9,10 +9,13 @@ permissions:
   contents: write
 
 jobs:
- build-and-attach:
+  build-and-attach:
     runs-on: windows-latest
 
     steps:
+      - name: Checkout BuddyBall repo
+        uses: actions/checkout@v4
+
       - name: Checkout BuddyBall source
         uses: actions/checkout@v4
         with:
@@ -42,7 +45,16 @@ jobs:
             -Path "win-unpacked\*" `
             -DestinationPath "BuddyBall-Portable.zip"
 
-      - name: Upload ZIP to release
+      - name: Create Buddies ZIP
+        shell: pwsh
+        run: |
+          Compress-Archive `
+            -Path "public\buddies\*" `
+            -DestinationPath "BuddyBall-Buddies.zip"
+
+      - name: Upload ZIPs to release
         uses: softprops/action-gh-release@v2
         with:
-          files: buddyball-source/dist/BuddyBall-Portable.zip
+          files: |
+            buddyball-source/dist/BuddyBall-Portable.zip
+            BuddyBall-Buddies.zip
