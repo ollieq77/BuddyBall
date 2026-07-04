@@ -46,10 +46,11 @@ jobs:
             -DestinationPath "BuddyBall-Portable.zip"
 
       - name: Create Buddies ZIP
+        working-directory: buddyball-source/dist
         shell: pwsh
         run: |
           Compress-Archive `
-            -Path "public\buddies\*" `
+            -Path "public\*" `
             -DestinationPath "BuddyBall-Buddies.zip"
 
       - name: Upload ZIPs to release
@@ -57,4 +58,4 @@ jobs:
         with:
           files: |
             buddyball-source/dist/BuddyBall-Portable.zip
-            BuddyBall-Buddies.zip
+            buddyball-source/dist/BuddyBall-Buddies.zip
