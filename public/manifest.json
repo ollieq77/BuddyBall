@@ -1,12 +1,20 @@
 {
     "buddies": {
-	    "sprecko": {
-	    	"path": "/buddies/sprecko/",
-	    	"manifest": "/buddies/sprecko/manifest.json"
-	    },
+        "sprecko": {
+            "path": "/buddies/sprecko/",
+            "manifest": "/buddies/sprecko/manifest.json"
+        },
         "jack": {
             "path": "/buddies/jack/",
             "manifest": "/buddies/jack/manifest.json"
+        },
+        "bildit": {
+            "path": "/buddies/bildit/",
+            "manifest": "/buddies/bildit/manifest.json"
+        },
+        "axolati": {
+            "path": "/buddies/axolati/",
+            "manifest": "/buddies/axolati/manifest.json"
         }
     }
 }

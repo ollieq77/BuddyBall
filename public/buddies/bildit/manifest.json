@@ -1,0 +1,24 @@
+{
+  "name": "Bildit",
+  "frame": "frame_0.png",
+  "colours": {
+    "c1": "#64b9fc",
+    "c2": "#e79c8e",
+    "c3": "#e0a024",
+    "c4": "#ddc0b0"
+  },
+  "sounds": {
+    "grab": [
+      "sounds/grab/hello_1.mp3",
+      "sounds/grab/hello_2.mp3",
+      "sounds/grab/hello_3.mp3",
+      "sounds/grab/hello_4.mp3"
+    ],
+    "release": [
+      "sounds/release/boo_1.mp3",
+      "sounds/release/boo_2.mp3",
+      "sounds/release/boo_3.mp3",
+      "sounds/release/boo_4.mp3"
+    ]
+  }
+}

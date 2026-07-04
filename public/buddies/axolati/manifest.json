@@ -1,0 +1,24 @@
+{
+  "name": "Axolati",
+  "frame": "frame_0.png",
+  "colours": {
+    "c1": "#df4e5b",
+    "c2": "#b94d7c",
+    "c3": "#894a54",
+    "c4": "#f2c394"
+  },
+  "sounds": {
+    "grab": [
+      "sounds/grab/hello_1.mp3",
+      "sounds/grab/hello_2.mp3",
+      "sounds/grab/hello_3.mp3",
+      "sounds/grab/hello_4.mp3"
+    ],
+    "release": [
+      "sounds/release/boo_1.mp3",
+      "sounds/release/boo_2.mp3",
+      "sounds/release/boo_3.mp3",
+      "sounds/release/boo_4.mp3"
+    ]
+  }
+}
