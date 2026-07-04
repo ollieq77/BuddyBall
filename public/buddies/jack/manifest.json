@@ -1,0 +1,19 @@
+{
+	"name": "Jack",
+	"frame": "frame_0.png",
+
+	"colours": {
+
+	},
+
+	"sounds": {
+		"grab": [
+			"sounds/grab/grab_1.mp3",
+			"sounds/grab/grab_2.mp3"
+		],
+		"release": [
+			"sounds/release/release_1.mp3",
+			"sounds/release/release_2.mp3"
+		]
+	}
+}

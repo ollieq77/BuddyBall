@@ -3,6 +3,10 @@
 	    "sprecko": {
 	    	"path": "/buddies/sprecko/",
 	    	"manifest": "/buddies/sprecko/manifest.json"
-	    }
+	    },
+        "jack": {
+            "path": "/buddies/jack/",
+            "manifest": "/buddies/jack/manifest.json"
+        }
     }
 }
