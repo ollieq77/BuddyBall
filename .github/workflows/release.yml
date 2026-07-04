@@ -2,38 +2,47 @@ name: Attach BuddyBall build to release
 
 on:
   release:
-    types: [published]
+    types:
+      - published
+
+permissions:
+  contents: write
 
 jobs:
-  build-and-attach:
+ build-and-attach:
     runs-on: windows-latest
+
     steps:
-      - name: Checkout Repo B (project source)
+      - name: Checkout BuddyBall source
         uses: actions/checkout@v4
         with:
           repository: ollieq77/BuddyBall-Project-Files
           path: buddyball-source
 
-      - name: Set up Node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+          cache-dependency-path: buddyball-source/package-lock.json
 
       - name: Install dependencies
         working-directory: buddyball-source
-        run: npm install
+        run: npm ci
 
-      - name: Build portable Electron app
+      - name: Build Electron app
         working-directory: buddyball-source
         run: npm run build
 
-      - name: Rename output zip
+      - name: Create portable ZIP
         working-directory: buddyball-source/dist
-        run: |
-          Get-ChildItem -Filter *.exe | Rename-Item -NewName "buddyball-portable.exe"
         shell: pwsh
+        run: |
+          Compress-Archive `
+            -Path "win-unpacked\*" `
+            -DestinationPath "BuddyBall-Portable.zip"
 
-      - name: Upload zip to the release
+      - name: Upload ZIP to release
         uses: softprops/action-gh-release@v2
         with:
-          files: buddyball-source/dist/buddyball-portable.exe
+          files: buddyball-source/dist/BuddyBall-Portable.zip
