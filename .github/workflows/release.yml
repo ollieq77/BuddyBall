@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Repo B (project source)
         uses: actions/checkout@v4
         with:
-          repository: YOUR_USERNAME/buddy-ball
+          repository: ollieq77/BuddyBall-Project-Files
           path: buddyball-source
 
       - name: Set up Node
